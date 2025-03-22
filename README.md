@@ -12,9 +12,7 @@ To run the system, make sure the server side machines have files `server.py` and
 Run the following 3 commands each in a separate terminal:
 ```sh
 python server.py --host {server1_host} --port {server1_port} --primary
-
 python server.py --host {server2_host} --port {server2_port} 
-
 python server.py --host {server3_host} --port {server3_port} 
 ```
 
