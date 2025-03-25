@@ -11,13 +11,13 @@ To run the system, make sure the server side machines have files `server.py` and
 ### 1. Start the Three Servers
 Run the following 3 commands each in a separate terminal:
 ```sh
-python server.py --host {server1_host} --port {server1_port} --primary
-python server.py --host {server2_host} --port {server2_port} 
-python server.py --host {server3_host} --port {server3_port} 
+python server.py --host {server1_host} --port 5555 --primary
+python server.py --host {server2_host} --port 5556
+python server.py --host {server3_host} --port 5557
 ```
 
 #### Example
-Here is how you can run the system on a single machine, but you can run it across multiple machines by modifying the server configurations accordingly. 
+Here is how you can run the system on a single machine, but you can run it across multiple machines by modifying the server IPs accordingly. 
 
 ```sh
 python server.py --host 127.0.0.1 --port 5555 --primary
@@ -28,6 +28,7 @@ python server.py --host 127.0.0.1 --port 5557
 ### 2. Modify Config File
 Modify `config.ini` to store the server configurations.
 
+#### Example
 ```sh
 [server]
 host1 = 127.0.0.1
@@ -44,7 +45,7 @@ python client.py
 ```
 
 ### 4. Rejoin a Server
-If a server goes down, rejoin it using a `--rejoin` flag.
+If a server goes down, rejoin it using the `--rejoin` flag.
 ```sh
 python server.py --host {rejoin_server_host} --port {rejoin_server_port} --rejoin
 ```
